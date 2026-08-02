@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Aleksandra</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+
     <style>
         /* Zmienne - Ciemny granat i różowe/fuksjowe neonowe akcenty */
         :root {
@@ -19,7 +24,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif; /* Wymuszamy pobraną czcionkę Inter */
             scroll-behavior: smooth;
         }
 
@@ -288,13 +293,12 @@
         /* Portfolio (Siatka wideo - Reels) */
         .portfolio-grid {
             display: grid;
-            /* Ustawiamy maksymalną szerokość kafelka na 320px, by filmy nie rozciągały się na boki */
             grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); 
-            justify-content: center; /* Zapewnia idealne wyśrodkowanie całej siatki */
+            justify-content: center; 
             gap: 2rem;
             max-width: 1200px;
             width: 100%;
-            margin: 0 auto; /* Wyśrodkowanie marginesami */
+            margin: 0 auto;
         }
 
         .portfolio-card {
@@ -337,7 +341,7 @@
             width: 100%;
             aspect-ratio: 9 / 16; 
             object-fit: cover; 
-            background-color: #000;
+            background-color: transparent; /* Zmiana na transparent ułatwia renderowanie miniatur */
             display: block;
         }
 
@@ -384,8 +388,8 @@
 </head>
 <body>
 
-    <video id="video1" class="bg-video" autoplay muted playsinline src="meduzy.mp4" style="opacity: 0.35;"></video>
-    <video id="video2" class="bg-video" muted playsinline src="meduzy.mp4" style="opacity: 0;"></video>
+    <video id="video1" class="bg-video" autoplay muted playsinline webkit-playsinline src="meduzy.mp4" style="opacity: 0.35;"></video>
+    <video id="video2" class="bg-video" muted playsinline webkit-playsinline src="meduzy.mp4" style="opacity: 0;"></video>
 
     <div class="video-overlay"></div>
 
@@ -444,27 +448,27 @@
         <div class="portfolio-grid">
             
             <div class="portfolio-card">
-                <video src="ROLKA TEST.mp4" controls playsinline></video>
+                <video src="reel1.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
             
             <div class="portfolio-card">
-                <video src="meduzy.mp4" controls playsinline></video>
+                <video src="reel2.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
             
             <div class="portfolio-card">
-                <video src="reel3.mp4" controls playsinline></video>
+                <video src="reel3.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
             
             <div class="portfolio-card">
-                <video src="reel4.mp4" controls playsinline></video>
+                <video src="reel4.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
             
             <div class="portfolio-card">
-                <video src="reel5.mp4" controls playsinline></video>
+                <video src="reel5.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
             
             <div class="portfolio-card">
-                <video src="reel6.mp4" controls playsinline></video>
+                <video src="reel6.mp4#t=0.001" preload="metadata" controls playsinline webkit-playsinline></video>
             </div>
 
         </div>
